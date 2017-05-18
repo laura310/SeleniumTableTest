@@ -58,8 +58,18 @@ public class SeleniumTableTest {
         System.out.println("MtLassenFollowingTr:		" + MtLassenFollowingTr.getText());
         System.out.println("MtLassenFollowingSibling:	" + MtLassenFollowingSibling.getText());
         System.out.println("MtLassenPreceding:		" + MtLassenPreceding.getText());
-        System.out.println("MtLassenAncestor:		" + MtLassenAncestor.getText());    
-               
+        System.out.println("MtLassenAncestor:		" + MtLassenAncestor.getText()); 
+        
+        
+        System.out.println("\n");
+        //WebElement element = driver.findElement(By.cssSelector("#The_most_basic_table"));
+        WebElement element = driver.findElement(By.cssSelector("[id='The_most_basic_table']"));
+        System.out.println("element:	" + element.getText());
+        
+        
+        WebElement img1 = driver.findElement(By.cssSelector("img[alt='Powered by MediaWiki']"));
+        System.out.println("img1 size:		" + img1.getSize());
+        
         pauseFunc(3000);
     }
 	
